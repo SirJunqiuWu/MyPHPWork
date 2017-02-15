@@ -5,7 +5,7 @@ class Index
 {
     public function index()
     {
-        return view('forgetWater');
+        return view('index');
     }
 
     public function login()

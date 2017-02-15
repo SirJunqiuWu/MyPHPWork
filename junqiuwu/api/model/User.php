@@ -91,6 +91,20 @@ class User extends Model
     }
 
     /**
+     * 更用:根据用户id和用户头像链接修改用户头像
+     * @param $id
+     * @param $image
+     * @return $this
+     */
+    public function update_image($id,$image)
+    {
+        $stamp['id'] = $id;
+        $update_image['image'] = $image;
+        $data = self::update($update_image,$stamp);
+        return $data;
+    }
+
+    /**
      * 查找:根据用户id获取指定用户的信息
      * @param $id
      * @return array|false|\PDOStatement|string|Model

@@ -39,7 +39,7 @@ function uploadImage($image_name)
         {
             //上传成功,获取图片的保存路径,拼接图片在服务器的连接地址可访问图片
             $save_name = $info->getSaveName();
-            $result = ['info'=>'失败','code'=>'1', 'data'=>'http://www.junqiuwu.com/images/'.$save_name];
+            $result = ['info'=>'上传成功','code'=>'1', 'data'=>'http://192.168.1.101/images/'.$save_name];
         }
         else
         {
@@ -52,5 +52,5 @@ function uploadImage($image_name)
     {
         $result = ['info'=>'失败','code'=>'1', 'data'=>'图片不存在'];
     }
-    return json($result);
+    return $result;
 }

@@ -1,20 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" name="吴俊秋" content="长江大学计算机科学与技术教授">
+    <title>美人屋</title>
+    <!--该标签作为HTML文档中所有的链接标签的默认链接:-->
+    <!--<base href="http://www.baidu.com" target="_blank">-->
+
+    <!--内部样式表-->
+    <style>body{background-color: #EFEFEF}</style>
+
+    <!--标签定义了文档与外部资源之间的关系,通常用于链接到外部样式表-->
     <link rel="stylesheet" href="/css/style.css">
+
 </head>
+
 <body>
-<div class="login">
-    <p>登陆页面</p>
+
+<div>
+    <!--alt属性作用:在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息-->
+    <img class="image-type-one" src="http://www.junqiuwu.com/images/640.jpg" alt="清爽">
+    <img class="image-type-two" src="http://www.junqiuwu.com/images/640.jpg" alt="可爱">
+    <img class="image-type-two" src="http://www.junqiuwu.com/images/640.jpg" alt="丽人">
+    <img class="image-type-two" src="http://www.junqiuwu.com/images/640.jpg" alt="性感">
+    <img class="image-type-three" src="http://www.junqiuwu.com/images/640.jpg" alt="高挑">
+    <img class="image-type-three" src="http://www.junqiuwu.com/images/640.jpg" alt="职业">
 </div>
+
+<!--<hr> 标签在 HTML 页面中创建水平线。-->
+<hr>
+
+<!--加粗字-->
+<b>亲密照片</b>
+<br>
+<!--斜体字-->
+<i>Jack && Rose</i>
+
+<!--<br>标签为换行标签-->
+<p class="param-text">这是我的美照,快来点赞吧
+    <br>这里有你意想不到的私密哦
+    <br>下面是我的电话,请call我.<br>
+    <small>Tel:18321567392<small>
+</p>
+
+<!--超文本链接-->
+<a class="my-album-text" href="http://www.baidu.com"><b>我的相册</b></a>
+
+<br>
+<br>
+
+<div class="my-tip">
+    <b class="poster-text">我的厨房照</b>
+    <!--a定义了一个超级链接-->
+    <a href="http://www.baidu.com"> <img class="image-type-four" src="http://www.junqiuwu.com/images/640.jpg" alt="我的私房照"></a>
+</div>
+
+<br>
+<br>
+
+
+<div class="my-tip">
+    <b class="poster-text">我的闺房照</b>
+    <a href="http://www.baidu.com"> <img class="image-type-four" src="http://www.junqiuwu.com/images/640.jpg" alt="我的闺房照"></a>
+</div>
+
+<br>
+<br>
+
+
+<div class="my-tip">
+    <b class="poster-text">我的户外照</b>
+    <a href="http://www.baidu.com"> <img class="image-type-four" src="http://www.junqiuwu.com/images/640.jpg" alt="我的闺房照"></a>
+</div>
+
 <div class="container">
-    <button type="button">按钮</button>
+    <button type="button" id="loginBtn">按钮</button>
 </div>
 
 <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js" ></script>
 <script src="/js/custom.js" ></script>
 
 </body>
+
 </html>

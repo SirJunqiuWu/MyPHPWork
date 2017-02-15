@@ -41,7 +41,7 @@ class User extends Controller
 
         //条件都满足,查询该用户是否存在
         $obj_has = $user->obj_has_by_name($name);
-        
+
         if ($obj_has)
         {
             //用户存在,执行登录
@@ -221,11 +221,13 @@ class User extends Controller
             $delete_result = $user->delete_user($id);
             if ($delete_result)
             {
-                $result = ['info'=>'删除成功','code' =>'1','data'=>$delete_result];
+                $data = $user->get_all_user();
+                $result = ['info'=>'删除成功','code' =>'1','data'=>$data];
             }
             else
             {
-                $result = ['info'=>'删除失败','code' =>'1','data'=>$delete_result];
+                $data = $user->get_all_user();
+                $result = ['info'=>'删除失败','code' =>'2','data'=>$data];
             }
         }
         else
@@ -256,6 +258,7 @@ class User extends Controller
             $result = ['info'=>'参数不足','code'=>'2','data'=>$obj];
             return json($result);
         }
+
         $user = new \app\api\model\User();
         $obj_has = $user->obj_has_by_id($id);
         $obj_data = $user->get_info($id);
@@ -353,8 +356,50 @@ class User extends Controller
      */
     public function uploadImage()
     {
-        $data = uploadImage('avatar');
-        return $data;
+        $id   = input('post.id');
+        $name = input('post.name');
+
+        $user = new \app\api\model\User();
+        if ($id)
+        {
+            //传了用户id
+            $obj_id = $id;
+        }
+        else
+        {
+            //传的是用户名
+            $obj_has = $user->obj_has_by_name($name);
+            if ($obj_has)
+            {
+                //用户存在,获取用户id
+                $obj = $user->get_info_by_name($name);
+                $obj_id = $obj['id'];
+            }
+            else
+            {
+                $result = createApiData(@"用户不存在",'2',null);
+                return json($result);
+            }
+        }
+
+        //上传图片结果
+        $data         = uploadImage('avatar');
+
+        $info         = $data['info'];
+        $image_url    = $data['data'];
+        $success_info = '上传成功';
+
+        if ($info == $success_info)
+        {
+            //头像上传成功,更改数据库中用户头像image字段
+            $update_image_result = $user ->update_image($obj_id,$image_url);
+//            var_dump($update_image_result);
+        }
+        else
+        {
+            //上传失败,不作处理
+        }
+        return json($data);
     }
 
 }
