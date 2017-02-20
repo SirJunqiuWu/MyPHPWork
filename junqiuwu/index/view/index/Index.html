@@ -5,17 +5,13 @@
     <title>美人屋</title>
     <!--该标签作为HTML文档中所有的链接标签的默认链接:-->
     <!--<base href="http://www.baidu.com" target="_blank">-->
-
     <!--内部样式表-->
-    <style>body{background-color: #EFEFEF}</style>
-
+    <!--<style>body{background-color: #EFEFEF}</style>-->
+    <body class="my-body"></body>
     <!--标签定义了文档与外部资源之间的关系,通常用于链接到外部样式表-->
     <link rel="stylesheet" href="/css/style.css">
-
 </head>
-
 <body>
-
 <div>
     <!--alt属性作用:在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息-->
     <img class="image-type-one" src="http://www.junqiuwu.com/images/640.jpg" alt="清爽">
@@ -25,60 +21,144 @@
     <img class="image-type-three" src="http://www.junqiuwu.com/images/640.jpg" alt="高挑">
     <img class="image-type-three" src="http://www.junqiuwu.com/images/640.jpg" alt="职业">
 </div>
-
 <!--<hr> 标签在 HTML 页面中创建水平线。-->
 <hr>
-
 <!--加粗字-->
 <b>亲密照片</b>
 <br>
 <!--斜体字-->
 <i>Jack && Rose</i>
-
 <!--<br>标签为换行标签-->
 <p class="param-text">这是我的美照,快来点赞吧
     <br>这里有你意想不到的私密哦
     <br>下面是我的电话,请call我.<br>
     <small>Tel:18321567392<small>
 </p>
-
 <!--超文本链接-->
 <a class="my-album-text" href="http://www.baidu.com"><b>我的相册</b></a>
-
 <br>
 <br>
-
 <div class="my-tip">
     <b class="poster-text">我的厨房照</b>
     <!--a定义了一个超级链接-->
-    <a href="http://www.baidu.com"> <img class="image-type-four" src="http://www.junqiuwu.com/images/640.jpg" alt="我的私房照"></a>
+    <a href="http://www.baidu.com"> <img class="image-type-four" src="http://www.junqiuwu.com/images/1.jpg" alt="最爱番茄炒蛋"></a>
 </div>
-
 <br>
 <br>
-
-
 <div class="my-tip">
     <b class="poster-text">我的闺房照</b>
-    <a href="http://www.baidu.com"> <img class="image-type-four" src="http://www.junqiuwu.com/images/640.jpg" alt="我的闺房照"></a>
+    <a href="http://www.baidu.com"> <img class="image-type-four" src="http://www.junqiuwu.com/images/640.jpg" alt="蕾丝睡衣"></a>
 </div>
-
 <br>
 <br>
-
-
 <div class="my-tip">
     <b class="poster-text">我的户外照</b>
-    <a href="http://www.baidu.com"> <img class="image-type-four" src="http://www.junqiuwu.com/images/640.jpg" alt="我的闺房照"></a>
+    <a href="http://www.baidu.com"> <img class="image-type-four" src="http://www.junqiuwu.com/images/640.jpg" alt="我爱运动"></a>
+</div>
+<br>
+<br>
+
+<!--表格,border为边框属性,cellspacing为单元格间距-->
+<table border="1" cellspacing="0" cellpadding="10">
+    <!--表格标题-->
+    <caption><b>我的学生成绩</b></caption>
+    <tr>
+        <!--表头-->
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Points</th>
+    </tr>
+    <tr>
+        <!--单元格数据源-->
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>Adam</td>
+        <td>Johnson</td>
+        <td>67</td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<!--无序列表-->
+<ul class="my-point">
+    <a class="my-point" href="http://www.baidu.com"><li>第一点</li></a>
+    <a class="my-point" href="http://www.baidu.com"><li>第二点</li></a>
+    <a class="my-point" href="http://www.baidu.com"><li>第三点</li></a>
+</ul>
+
+<!--有序表-->
+<ol class="my-point">
+    <li>coffee</li>
+    <li>Milk</li>
+</ol>
+
+<!--自定义列表-->
+<dl class="my-point">
+    <dt>Coffee</dt>
+    <dd class="my-sub-text">- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd class="my-sub-text">- white cold drink</dd>
+</dl>
+
+<br>
+
+<!--使用列表实现基本布局,但是不推荐,列表最好用作展示表格数据-->
+<table cellspacing="0" class="my-table-two">
+    <tr>
+        <td class="my-table-row-1">
+            <h1>主要的网页标题</h1>
+        </td>
+    </tr>
+    <tr>
+        <td class="my-table-row-2-1">
+            <b>菜单</b><br>
+            <b>HTML</b><br>
+            <b>CSS</b><br>
+            <b>JavaScript</b>
+        </td>
+        <td class="my-table-row-2-2">
+            <b>内容在这里</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="my-table-row-3">
+            <b>版权归吴俊秋所有</b>
+        </td>
+    </tr>
+</table>
+
+
+
+<br>
+
+<!--使用div块级元素-->
+<div id="web" class="web">
+    <div id="header" style="background-color: #FFA500"><h1 style="margin-bottom: 0">主要的网页标题</h1></div>
+    <div id="menu" class="my-table-row-2-1">
+        <b>菜单</b><br>
+        <b>HTML</b><br>
+        <b>CSS</b><br>
+        <b>JavaScript</b>
+    </div>
+    <div id="content" class="my-table-row-2-2"><b>内容在这里</b></div>
+    <div id="footer" class="my-table-row-3"><b>版权归吴俊秋所有</b></div>
 </div>
 
-<div class="container">
-    <button type="button" id="loginBtn">按钮</button>
-</div>
-
-<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js" ></script>
-<script src="/js/custom.js" ></script>
 
 </body>
-
 </html>
