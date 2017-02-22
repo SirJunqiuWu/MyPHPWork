@@ -23,7 +23,7 @@ class Login extends Controller
 
     public function logout()
     {
-        return view('index');
+        return view('login');
     }
 
 }
